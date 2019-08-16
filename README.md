@@ -1,6 +1,13 @@
 get all the dependencies:  
-```py
+```
 pip install requirement.txt
 ```
+
+run flask:  
+```
+flask run
+```  
+open `index.html` file 
+
   
 
