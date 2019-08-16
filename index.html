@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="app" v-cloak>
+		<div id="kaka">
+			{{ info }}
+		</div>
+		<h3> {{message}} </h3>
+		<form method="post" action="" v-on:submit.prevent="sendData">
+			<p>
+				season
+				<input type="number" v-model="season" placeholder="season">
+
+			</p>
+			<p>
+				holiday
+				<input type="number" v-model="holiday" placeholder="holiday">
+			</p>
+			<p>
+				workingday
+				<input type="number" v-model="workingday" placeholder="workingday">
+			</p>
+			<p>
+				weather
+				<input type="number"  v-model="weather" placeholder="weather" >
+			</p>
+			<p>
+				temp
+				<input type="number" step="any" v-model="temp" placeholder="temp">
+			</p>
+			<p>
+				humidity
+				<input type="number" v-model="humidity" placeholder="humidity">
+			</p>
+			<p>
+				windspeed
+				<input type="number" step="any" v-model="windspeed" placeholder="windspeed" >
+			</p>
+			<p>
+				casual
+				<input type="number" v-model="casual" placeholder="casual">
+			</p>
+			<p>
+				registered
+				<input type="number" v-model="registered" placeholder="registered">
+			</p>
+			<p>
+				<input type="submit" value="Submit">
+			</p>
+		</form>
+
+		<p>
+			Amount: {{ result }}
+		</p>
+
+		<div class="todo-lists" v-if="lists.length">
+			<h3>List</h3>
+			<ul>
+				<li v-for="list in lists" :key="list.id">
+					<span class="title">{{list.title}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="vue.js"></script>
+</body>
